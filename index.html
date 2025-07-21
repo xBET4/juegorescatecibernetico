@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rescate Cibernético - 8x8</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <h1>🎮 Rescate Cibernético</h1>
+    <p class="descripcion">
+      Ayuda al agente a escapar resolviendo acertijos de lógica. Comparte este juego con tus amigos:
+    </p>
+
+    <div id="turnos">Turnos restantes: 40</div>
+    <div id="mensaje"></div>
+    <div class="tablero" id="tablero"></div>
+
+    <!-- Controles de movimiento -->
+    <div class="controles">
+      <button data-dir="arriba">⬆️</button><br />
+      <button data-dir="izquierda">⬅️</button>
+      <button data-dir="abajo">⬇️</button>
+      <button data-dir="derecha">➡️</button>
+    </div>
+
+    <!-- Sección para preguntas de Verdadero o Falso -->
+    <div id="preguntaVF" class="pregunta-vf oculto">
+      <p id="textoPregunta"></p>
+      <p>Intentos restantes: <span id="intentosRestantes">3</span></p>
+      <button onclick="responderVF(true)">Verdadero</button>
+      <button onclick="responderVF(false)">Falso</button>
+    </div>
+
+    <!-- Sección para dado -->
+    <div class="dado-container">
+      <button onclick="lanzarDado()">🎲 Lanzar dado</button>
+      <p id="resultadoDado">Resultado del dado: -</p>
+    </div>
+  </div>
+
+  <!-- Modal de final del juego -->
+  <div id="modalFinal" class="modal oculto">
+    <div class="modal-contenido">
+      <h2 id="mensajeFinal"></h2>
+      <button onclick="reiniciarJuego()">Reiniciar Juego</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

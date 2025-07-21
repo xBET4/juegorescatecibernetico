@@ -1,0 +1,194 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.contenedor {
+  text-align: center;
+  max-width: 700px;
+}
+
+.descripcion {
+  margin-top: -10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  gap: 5px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+
+.casilla {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  font-size: 10px;
+  text-align: center;
+  padding: 2px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.inicio {
+  background-color: #0066ff;
+  font-weight: bold;
+  color: white;
+}
+
+.final {
+  background-color: #00ff66;
+  font-weight: bold;
+  color: black;
+}
+
+.agente {
+  background-color: #00ffd5;
+}
+
+.firewall {
+  background-color: #ff5e5e;
+}
+
+.ayuda {
+  background-color: #5eff8e;
+}
+
+.libre {
+  background-color: #444;
+}
+
+#turnos,
+#mensaje {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background-color: #00ffd5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00c2a7;
+}
+
+input[type='text'] {
+  padding: 8px;
+  width: 80%;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
+/* Nueva sección de pregunta VF */
+.pregunta-vf {
+  margin-top: 20px;
+  background: #222b3b;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffd5;
+}
+
+.pregunta-vf p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Sección dado */
+.dado-container {
+  margin-top: 25px;
+  background: #222b3b;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #00ffd5;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#resultadoDado {
+  margin-top: 10px;
+  color: #00ffd5;
+}
+
+/* Modal final */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background-color: #222b3b;
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffd5;
+  text-align: center;
+  color: white;
+}
+
+.modal-contenido h2 {
+  margin-bottom: 20px;
+}
+
+.modal-contenido button {
+  background-color: #00ffd5;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-contenido button:hover {
+  background-color: #00c2a7;
+}
+
+.oculto {
+  display: none;
+}
+.superado {
+  background-color: #aa4444; /* rojo oscuro */
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
